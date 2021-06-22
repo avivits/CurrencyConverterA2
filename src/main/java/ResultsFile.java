@@ -1,4 +1,4 @@
-//singleton for writing resukts into a txt file
+//singleton for writing results into a txt file
 
 import java.io.*;
 import java.util.ArrayList;
