@@ -11,7 +11,7 @@ public class CurrencyConverter {
     public static void main(String[] args) throws NullPointerException {
 
         boolean gameOn = true;
-        int choice;             // 1/2 option
+        int choice;             // 1/2/3 options
         Scanner scannerChoice;
         CoinFactory coinFactory = new CoinFactory();    //using enum choice
         ChoiceScreen choiceScreen = new ChoiceScreen();
@@ -25,7 +25,8 @@ public class CurrencyConverter {
 
         while (gameOn) {
             try {
-                System.out.println("Please choose an option (1/2):\n" + "1. Dollars to Shekels \n" + "2. Shekels to Dollars");
+                System.out.println("Please choose an option (1/2/3):\n" + "1. Dollars to Shekels \n" + "2. Shekels to Dollars \n"+
+                 "3. Shekels to Euro");
                 scannerChoice = new Scanner(System.in);
                 choice = scannerChoice.nextInt();
 
@@ -33,7 +34,7 @@ public class CurrencyConverter {
                     case 1:
                         try {
                             Coin usd = coinFactory.getCoin(Coins.USD); //create and call USD
-                            resultScreen.getResult(usd.calculate(choiceScreen.getChoice())); //Use calculate() from ILS/USD classes to perform the calculations main
+                            resultScreen.getResult(usd.calculate(choiceScreen.getChoice())); //Use calculate() from ILS/USD/EUR classes to perform the calculations main
 
                         } catch (InputMismatchException e) {
                             System.out.println("Invalid choice, please try again");
@@ -43,7 +44,17 @@ public class CurrencyConverter {
                     case 2:
                         try {
                             Coin ils = coinFactory.getCoin(Coins.ILS); //create and call ILS
-                            resultScreen.getResult(ils.calculate(choiceScreen.getChoice()));  //Use calculate() from ILS/USD classes to perform the calculations main
+                            resultScreen.getResult(ils.calculate(choiceScreen.getChoice()));  //Use calculate() from ILS/USD/EUR classes to perform the calculations main
+
+                        } catch (InputMismatchException e) {
+                            System.out.println("Invalid choice, please try again");
+                        }
+                        break;
+
+                    case 3:
+                        try {
+                            Coin eur = coinFactory.getCoin(Coins.EUR); //create and call EUR
+                            resultScreen.getResult(eur.calculate(choiceScreen.getChoice()));  //Use calculate() from ILS/USD/EUR classes to perform the calculations main
 
                         } catch (InputMismatchException e) {
                             System.out.println("Invalid choice, please try again");
@@ -67,6 +78,7 @@ public class CurrencyConverter {
         } //while loop gameOn
 
         endScreen.writeResult(resultScreen.returnResultList());    // -----------End Screen-------------------
+        endScreen.openFile();
 
     }
 }
