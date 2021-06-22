@@ -1,3 +1,5 @@
+package screens;
+
 import java.util.ArrayList;
 
 public class EndScreen {

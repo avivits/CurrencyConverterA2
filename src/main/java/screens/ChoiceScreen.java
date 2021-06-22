@@ -1,3 +1,5 @@
+package screens;
+
 import java.util.Scanner;
 //  get from user  how much to convert
 

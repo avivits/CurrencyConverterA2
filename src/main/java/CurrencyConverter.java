@@ -1,8 +1,8 @@
-import java.nio.channels.ScatteringByteChannel;
-import java.time.Year;
-import java.util.ArrayList;
+import screens.ChoiceScreen;
+import screens.EndScreen;
+import screens.ResultScreen;
+
 import java.util.InputMismatchException;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class CurrencyConverter {
@@ -21,6 +21,7 @@ public class CurrencyConverter {
         //-------------------------------------welcome screen-----------------------------------------------------
 
         System.out.println("**** Welcome to currency converter ****");
+        System.out.println("*************************************************");
 
         while (gameOn) {
             try {
