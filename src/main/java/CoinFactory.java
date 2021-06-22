@@ -19,6 +19,10 @@ public class CoinFactory {
         {
             return new ILS();
         }
+        else if(coinType.equals(Coins.EUR))
+        {
+            return new EUR();
+        }
 
         return null;
     }
