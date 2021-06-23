@@ -35,11 +35,7 @@ public class CurrencyConverter {
                     case 1:
                         try {
                             Coin usd = coinFactory.getCoin(Coins.USD); //create and call USD
-                            double r = (usd.calculate(choiceScreen.getChoice())); //Use calculate() from ILS/USD/EUR classes to perform the calculations main
-                            resultScreen.getResult( r);
-                           Result flowResult  = new Result(usd.flowChoice() ,r );
-                         //  resultScreen.returnResultList1(flowResult());
-                            flowResult.storeResults();
+                            resultScreen.getResult(usd.calculate(choiceScreen.getChoice())); //Use calculate() from ILS/USD/EUR classes to perform the calculations main
 
                         } catch (InputMismatchException e) {
                             System.out.println("Invalid choice, please try again");
@@ -83,8 +79,6 @@ public class CurrencyConverter {
 
         } //while loop gameOn
 
-//        Result resultOb = new Result( "USD to ILS" , 4.25);
-//        resultOb.storeResults();
         endScreen.writeResult(resultScreen.returnResultList());    // -----------End Screen-------------------
         endScreen.openFile();
 

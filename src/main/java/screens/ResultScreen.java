@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class ResultScreen {
 
     public ArrayList<Double> resultList = new ArrayList<>();  //for storing all results
-    public ArrayList<Result>listFlow = new ArrayList<>();
 
     public void getResult(double result)
     {
@@ -21,12 +20,6 @@ public class ResultScreen {
     public ArrayList<Double> returnResultList( )     // for writing in a text file in EndScreen class
     {
         return resultList;
-    }
-
-    public ArrayList<Result> returnResultList1(Result r )     // for writing in a text file in EndScreen class
-    {
-        listFlow.add(r);
-        return listFlow;
     }
 
     public boolean startOver(boolean gameOn)

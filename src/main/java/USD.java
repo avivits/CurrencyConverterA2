@@ -18,8 +18,5 @@ public class USD extends Coin implements Serializable {
         return result;
     }
 
-    @Override
-    public String flowChoice (){
-        return "“USD to ILS";
-    }
+
 }
