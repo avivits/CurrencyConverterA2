@@ -18,5 +18,4 @@ public class USD extends Coin implements Serializable {
         return result;
     }
 
-
-}
+  }
