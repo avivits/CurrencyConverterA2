@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class CurrencyConverter {
 
 
-    public static void main(String[] args) throws NullPointerException {
+    public static void main(String[] args) throws NullPointerException  {
 
         boolean gameOn = true;
         int choice;             // 1/2/3 options
@@ -36,8 +36,8 @@ public class CurrencyConverter {
                         try {
                             Coin usd = coinFactory.getCoin(Coins.USD); //create and call USD
                             resultScreen.getResult(usd.calculate(choiceScreen.getChoice())); //Use calculate() from ILS/USD/EUR classes to perform the calculations main
-                            Result result1 = new Result(4.27, "USD to ILS");
-                            result1.storeResults();
+                           usd.flowChoice();
+                           // Result flowResult  = new Result(usd.fl)
                         } catch (InputMismatchException e) {
                             System.out.println("Invalid choice, please try again");
                         }
@@ -77,8 +77,11 @@ public class CurrencyConverter {
             } catch (InputMismatchException e) {
                 System.out.println("Invalid choice, please try again");
             }
+
         } //while loop gameOn
 
+        Result resultOb = new Result( "USD to ILS" , 4.25);
+        resultOb.storeResults();
         endScreen.writeResult(resultScreen.returnResultList());    // -----------End Screen-------------------
         endScreen.openFile();
 

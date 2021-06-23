@@ -17,4 +17,8 @@ public class USD extends Coin implements Serializable {
         double result = value*input;
         return result;
     }
+
+    public String flowChoice (){
+        return "“USD to ILS";
+    }
 }

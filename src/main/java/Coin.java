@@ -7,4 +7,6 @@ public abstract class  Coin implements ICalculate {
 
     public double calculate(double d) {return d; }
 
+    public abstract String flowChoice() ;
+
 }
