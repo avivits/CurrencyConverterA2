@@ -11,6 +11,7 @@ public class EUR extends Coin implements Serializable {
         return value;
     }
 
+    @Override
     public double calculate(double input) {
         getValue();   //Call getValue() method from calculate() inside both USD and ILS classes to perform the calculation.
         double result = value*input;
