@@ -1,5 +1,6 @@
 package screens;
 
+import javax.xml.transform.Result;
 import java.util.ArrayList;
 import java.awt.Desktop;
 import java.io.*;
@@ -23,7 +24,6 @@ public class EndScreen {
         }
 
     }
-
 
     public void openFile() {
         try {

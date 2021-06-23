@@ -2,6 +2,7 @@ import screens.ChoiceScreen;
 import screens.EndScreen;
 import screens.ResultScreen;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -35,7 +36,8 @@ public class CurrencyConverter {
                         try {
                             Coin usd = coinFactory.getCoin(Coins.USD); //create and call USD
                             resultScreen.getResult(usd.calculate(choiceScreen.getChoice())); //Use calculate() from ILS/USD/EUR classes to perform the calculations main
-
+                            Result result1 = new Result(4.27, "USD to ILS");
+                            result1.storeResults();
                         } catch (InputMismatchException e) {
                             System.out.println("Invalid choice, please try again");
                         }

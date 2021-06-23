@@ -1,11 +1,14 @@
 package screens;
 
+//showing all results on screen and create an array list to store them +
+
+import javax.xml.transform.Result;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ResultScreen {
 
-    public ArrayList<Double> resultList=new ArrayList<>();  //for storing all results
+    public ArrayList<Double> resultList = new ArrayList<>();  //for storing all results
 
     public void getResult(double result)
     {
@@ -14,7 +17,7 @@ public class ResultScreen {
 
     }
 
-    public ArrayList<Double> returnResultList( )
+    public ArrayList<Double> returnResultList( )     // for writing in a text file in EndScreen class
     {
         return resultList;
     }
