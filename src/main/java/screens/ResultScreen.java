@@ -1,6 +1,6 @@
 package screens;
 
-//showing all results on screen and create an array list to store them +
+//showing 1 result each time on screen and create an array list to store them +
 
 import javax.xml.transform.Result;
 import java.util.ArrayList;

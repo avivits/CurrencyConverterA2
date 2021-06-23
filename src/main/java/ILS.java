@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class ILS extends Coin implements Serializable {
 
-   final double value = 0.28;  // the rate of Shekels
+   final double value = 0.28;  // the rate of Shekels for dollars
 
    @Override
     public double getValue() {
